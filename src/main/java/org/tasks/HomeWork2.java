@@ -28,7 +28,7 @@ public class HomeWork2 {
 
 
 
-        Task4();
+        Task1();
 
 
     }
@@ -53,7 +53,12 @@ public class HomeWork2 {
         Iterator membersItr = memberArr.iterator();
         while (membersItr.hasNext()) {
             JSONObject jsobj = (JSONObject) membersItr.next();
-            res.append(jsobj.get(input.toString()) + "\n");
+            String param = jsobj.get(input.toString()).toString().replace(" ","");
+            if(!param.equals("null")) {
+
+                res.append(param + "\n");
+            }
+
         }
         System.out.println(res);
 
