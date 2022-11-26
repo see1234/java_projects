@@ -36,6 +36,10 @@ public class HomeWork2 {
         Scanner sc = new Scanner(System.in);
         System.out.print("select * from students where ");
         StringBuilder input = new StringBuilder().append(sc.next());
+        if(input == null) {
+            System.out.println("error null");
+            return;
+        }
         Object obj = null;
         try {
             obj = new JSONParser().parse("{\"students\": [{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"},{\"name\":\"Ivanov3\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"}]}");
